@@ -1,0 +1,205 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.video-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: -1;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure logo and nav links are on the same line */
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 1em 0;
+    color: white;
+    background: transparent; /* Remove background color */
+}
+
+header .logo {
+    font-size: 2em; /* Increase the size of the logo */
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s; /* Add transition for hover effect */
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+    color: #FFD700; /* Change color on hover and focus */
+}
+
+.menu-btn {
+    display: none;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 2em;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+}
+
+.content h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.content p {
+    font-size: 1.5em;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.content a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: 2px solid #FFD700;
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.content a:hover {
+    background-color: #FFD700;
+    color: black;
+}
+
+.highlight {
+    color: #FFD700;
+}
+
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: .15em solid #FFD700;
+    white-space: nowrap;
+    margin-left: 0.3em; /* Adjust the margin to add space */
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    vertical-align: middle;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #FFD700; }
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+}

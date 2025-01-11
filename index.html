@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-container">
+        <div class="overlay"></div>
+        <video autoplay muted loop class="video-background">
+            <source src="bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <header>
+            <div class="container header-container">
+                <div class="logo">Your Initials</div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <button class="menu-btn" onclick="toggleSidebar()">&#9776;</button>
+                </nav>
+            </div>
+        </header>
+        <div id="sidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <section id="landing" class="content">
+            <h1>Hello, I'm <span class="highlight">Your Name</span></h1>
+            <p>I'm a <span class="highlight typewriter" id="changing-text">full stack developer</span></p>
+            <a href="#work">VIEW MY WORK</a>
+        </section>
+    </div>
+    <section id="about" class="content">
+        <h2>About Me</h2>
+        <p>Write something about yourself here.</p>
+    </section>
+    <section id="projects" class="content">
+        <h2>Projects</h2>
+        <p>Highlight your projects here.</p>
+    </section>
+    <section id="contact" class="content">
+        <h2>Contact</h2>
+        <p>How people can reach you.</p>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Your Name</p>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

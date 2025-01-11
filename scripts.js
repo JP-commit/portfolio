@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const words = ["full stack developer", "data analyst", "writer", "gamer"];
+    const words = ["developer", "data analyst", "writer", "gamer"];
     let i = 0;
     const typingSpeed = 100;
     const erasingSpeed = 50;
